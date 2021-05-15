@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+Тустовая страница:: {{block.super}}
+
+{% block sidebar %}
+{% include 'inc/_sidebar.html' %}
+{% endblock %}
+
+{% block content %}
+    {% for name in page_obj.object_list %}
+        <p> {{ name }}</p>
+    {% endfor %}
+
+
+{% endblock %}
