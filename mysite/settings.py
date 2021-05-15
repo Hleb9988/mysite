@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import django_heroku
 from pathlib import Path
-
+django_heroku.settings(locals())
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -146,6 +146,3 @@ INTERNAL_IPS = [
     '127.0.0.1',
 ]
 
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
