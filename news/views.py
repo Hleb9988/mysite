@@ -46,7 +46,7 @@ def user_logout(request):
 
 
 def contact(request):
-    objects = ['john1', 'paul2', 'george3', 'ringo4', 'john5', 'paul6', 'george7']
+    objects = ['Главный редактор', 'Справка', 'Бухгалтерия']
     paginator = Paginator(objects, 2)
     page_num = request.GET.get('page', 1)
     page_objects = paginator.get_page(page_num)
